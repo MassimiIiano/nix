@@ -162,18 +162,8 @@
   };
 
   # Boot
-  boot = {
-    tmp.cleanOnBoot = true;
-    supportedFilesystems = [ "btrfs" "ext4" "fat32" "ntfs" ];
-    loader = {
-      grub = {
-        enable = true;
-        device = "nodev";
-        efiSupport = true;
-        useOSProber = true;
-      };
-      efi.canTouchEfiVariables = true;
-    };
+    boot.loader.systemd-boot.enable = true;
+    boot.loader.efi.canTouchEfiVariables = true;
     # kernelPackages = pkgs.linuxPackages_xanmod_latest;
     # kernelPatches = [{
     #   name = "enable RT_FULL";
