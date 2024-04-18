@@ -5,31 +5,23 @@
 
 {
   imports =
-    [
-      (modulesPath + "/installer/scan/not-detected.nix")
+    [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" ];
+  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
-  fileSystems."/" = {
-    device = "/dev/disk/by-uuid/2f776d95-b8d5-429d-9707-5932f66c74b4";
-    fsType = "btrfs";
-    options = [ "subvol=@" ];
-  };
+  fileSystems."/" =
+    { device = "/dev/disk/by-uuid/6babe1f3-1b5e-45c4-90db-6e09cb424e36";
+      fsType = "ext4";
+    };
 
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/8AEB-96D6";
-    fsType = "vfat";
-  };
-
-  fileSystems."/mnt/Windows" = {
-    device = "/dev/disk/by-uuid/FEAC16F7AC16AA63";
-    fsType = "ntfs-3g";
-    options = [ "rw" "uid=1000" ];
-  };
+  fileSystems."/boot" =
+    { device = "/dev/disk/by-uuid/D705-977E";
+      fsType = "vfat";
+    };
 
   swapDevices = [ ];
 
@@ -41,8 +33,5 @@
   # networking.interfaces.wlp1s0.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  hardware = {
-    cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-    uinput.enable = true;
-  };
+  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

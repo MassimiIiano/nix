@@ -131,9 +131,21 @@
   users = {
     defaultUserShell = pkgs.zsh;
     users.${username} = {
+      home = "/home/${username}";
+      description = "End4";
+      # password = { sha256 = pkgs.hashPassword "end"; };
       isNormalUser = true;
       shell = pkgs.zsh;
-      extraGroups = [ "networkmanager" "wheel" "video" "input" "uinput" "libvirtd" ];
+      extraGroups = [ "networkmanager" "wheel" "docker" "video" "input" "uinput" "libvirtd" ];
+    };
+    users.spatola = {
+      isNormalUser = true;
+      description = "Spatola";
+      extraGroups = [ "networkmanager" "wheel" "docker" "video" "input" "uinput" "libvirtd" ];
+      packages = with pkgs; [
+          pkgs.firefox
+          pkgs.direnv
+      ];
     };
   };
 

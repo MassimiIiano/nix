@@ -28,6 +28,7 @@
       # more users can be added this way
       # as long as their home directories exist
       end = ./end;
+      # spatola = ./spatola;
     };
   };
 }
