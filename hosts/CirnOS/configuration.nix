@@ -158,7 +158,7 @@
   # bluetooth
   hardware.bluetooth = {
     enable = true;
-    powerOnBoot = false;
+    # powerOnBoot = false;
   };
 
   # Boot
