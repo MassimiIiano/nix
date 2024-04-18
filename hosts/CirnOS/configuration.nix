@@ -183,7 +183,7 @@
     # extraModprobeConfig = ''
     #   options snd_hda_intel model=headset-mode
     # '';
-  };
+  # };
 
   system.stateVersion = "23.11";
 }
