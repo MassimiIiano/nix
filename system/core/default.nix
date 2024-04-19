@@ -1,10 +1,11 @@
 {...}: {
   imports = [
-    ./docker.nix
-    ./bluetooth.nix
-    ./local.nix
-    ./users.nix
     ./system.nix
-    ./bootloader.nix
+    ./schizo.nix
+    ./network.nix
+    ./secrets.nix
+    ./nix.nix
+    ./users.nix
+    ./openssh.nix
   ];
 }

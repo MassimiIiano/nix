@@ -1,4 +1,5 @@
 _: {
+  services.pipewire = {
     enable = true;
     alsa = {
       enable = true;
@@ -7,4 +8,5 @@ _: {
     wireplumber.enable = true;
     pulse.enable = true;
     jack.enable = true;
+  };
 }

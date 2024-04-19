@@ -1,14 +1,19 @@
 {pkgs, ...}: {
   nixpkgs.config.allowUnfree = false;
   home.packages = with pkgs; [
-    # TODO: Add your packages here
+    libreoffice-fresh
+    prismlauncher
+    inkscape
+    ledger-live-desktop
+    ledger_agent
+    tdesktop
+    calcurse
+    pulseaudio
+    signal-desktop
+    transmission-gtk
+    gimp
     wireshark
-    python3
-    gh
-    vscode
-    firefox
-    ngrok
-    ghidra
-    bastet
+    keepassxc
+    dconf
   ];
 }
