@@ -9,7 +9,6 @@
   wayland.windowManager.hyprland.enable = true;
   
   imports = [
-    # ./binds.nix 
     # ./config.nix 
     # ./rules.nix
   ];
@@ -20,6 +19,17 @@
       [
         "$mod, F, exec, firefox"
         ", Print, exec, grimblast copy area"
+        "$mod,MINUS,killactive"
+        "$mod, Q, exex, kitty"
+        "$mod, F, exec, firefox"
+
+        "$mod,H,movefocus,l"
+        "$mod,L,movefocus,r"
+        "$mod,K,movefocus,u"
+        "$mod,J,movefocus,d"
+
+        "$mod,V,togglefloating," # toggle floating for the focused window
+        "$mod,up,fullscreen," # fullscreen focused window
       ]
       ++ (
         # workspaces
