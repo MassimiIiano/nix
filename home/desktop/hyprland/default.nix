@@ -6,7 +6,7 @@
   ...
 }:{
 
-  wayland.windowManager.hyprland.enable = true;
+  # wayland.windowManager.hyprland.enable = true;
   
   
   # fake a tray to let apps start
