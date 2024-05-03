@@ -2,7 +2,7 @@
   imports = [
     ./gtk.nix
     ./zathura.nix
-    ./hyprland
+    # ./hyprland
     # ./waybar
   ];
 }
