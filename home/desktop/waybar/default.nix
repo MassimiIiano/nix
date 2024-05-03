@@ -12,7 +12,7 @@
   # Configure the Waybar program.
   programs.waybar = {
     enable = true;
-    # style = import ./style.nix;
+    style = import ./style.nix;
     # systemd = {
     #   enable = true;
     #   target = "hyprland-session.target";
