@@ -9,4 +9,5 @@ swww init &
 nm-applet --indicator &
 
 waybar &
-dunst
+dunst &
+wofi
