@@ -20,7 +20,7 @@
         "$mod, F, exec, firefox"
         ", Print, exec, grimblast copy area"
         "$mod,MINUS,killactive"
-        "$mod, Q, exex, kitty"
+        "$mod, Q, exec, kitty"
         "$mod, F, exec, firefox"
 
         "$mod,H,movefocus,l"
