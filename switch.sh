@@ -10,4 +10,4 @@ git commit -m "home-manager switch: $(date)"
 git push
 
 # Rebuld NixOS
-sudo home-manager switch
+home-manager switch
