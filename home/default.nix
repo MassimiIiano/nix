@@ -18,6 +18,7 @@
   nixpkgs.config.allowUnfree = true;
   imports = [
     ./packages.nix
+    ./desktop
     ./cli
   ];
 
