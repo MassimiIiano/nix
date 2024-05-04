@@ -1,4 +1,4 @@
-# This Nix expression defines the configuration for GTK, Qt, and XDG settings.
+# Configuration for GTK, Qt, and XDG settings.
 # It specifies the theme, icon theme, font, and additional configurations for GTK.
 # It also sets up the packages and cursor for the home environment.
 # Lastly, it configures the Qt platform theme and style, and sets up XDG configuration files.
@@ -20,6 +20,7 @@
       package = pkgs.catppuccin-papirus-folders;
       name = "Papirus";
     };
+
     font = {
       name = "Lexend";
       size = 11;
@@ -61,6 +62,7 @@
       GTK_USE_PORTAL = "1";
     };
   };
+
   qt = {
     enable = true;
     platformTheme.name = "qtct";
@@ -72,6 +74,7 @@
       };
     };
   };
+  
   xdg.configFile = {
     "Kvantum/catppuccin/catppuccin.kvconfig".source = builtins.fetchurl {
       url = "https://raw.githubusercontent.com/catppuccin/Kvantum/main/src/Catppuccin-Frappe-Pink/Catppuccin-Frappe-Pink.kvconfig";
