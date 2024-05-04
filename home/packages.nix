@@ -20,9 +20,6 @@
     ngrok                 # tunneling
     ghidra                # reverse engineering
 
-    # for hyprland
-    waybar
-
     # gaming
     protonup              # protonvpn cli
     bastet                # tetris
