@@ -10,4 +10,3 @@ nm-applet --indicator &
 
 waybar &
 dunst &
-wofi
