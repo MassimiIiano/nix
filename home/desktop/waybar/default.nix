@@ -2,8 +2,12 @@
 { pkgs, lib, ... }:
 {
   # Configure the Waybar program.
-  programs.waybar = {
-    enable = true;
-    style = import ./style.nix;
-  };
+  # programs.waybar = {
+  #   enable = true;
+  #   style = import ./style.nix;
+
+  # };
+
+    home.file.".config/waybar/config.jsonc".source = ./config.jsonc;
+    home.file.".config/waybar/style.css".source = ./style.css;
 }
