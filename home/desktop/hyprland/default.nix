@@ -7,6 +7,7 @@
 }:{
 
   home.packages = with pkgs; [ gnome.file-roller hyprlock ];
+
   wayland.windowManager.hyprland = {
     enable = true;
     extraConfig = ''
@@ -202,7 +203,7 @@ bindm = $mainMod, mouse:273, resizewindow
 
 # starts dunst, swww and waybar
 exec-once=bash ~/.config/hypr/start.sh
-    ''
+    '';
   };
 
   # home.file.".config/hypr/hyprland.conf".source = ./hyprland.conf; 
