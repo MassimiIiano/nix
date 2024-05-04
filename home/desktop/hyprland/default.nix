@@ -202,9 +202,9 @@ bindm = $mainMod, mouse:272, movewindow
 bindm = $mainMod, mouse:273, resizewindow
 
 # Example Media keys
-bind = XF86AudioMute,, exec, amixer set Master toggle
-bind = XF86AudioRaiseVolume,, exec, exec amixer set Master 5%+
-bind = XF86AudioLowerVolume,, exec ,amixer set Master 5%-
+bind = ,XF86AudioMute, exec, amixer set Master toggle
+bind = ,XF86AudioRaiseVolume, exec, exec amixer set Master 5%+
+bind = ,XF86AudioLowerVolume, exec ,amixer set Master 5%-
 
 # starts dunst, swww and waybar
 exec-once=bash ~/.config/hypr/start.sh
