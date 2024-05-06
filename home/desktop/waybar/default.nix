@@ -190,7 +190,7 @@
         };
         "clock" = {
           "interval" = 1;
-          "format" = "{:%H:%M, %A %b %d}";
+          "format" = "{:%A %b %d, %H:%M}";
           "tooltip" = true;
           "tooltip-format"= "{=%A; %d %B %Y}\n<tt>{calendar}</tt>";
         };
