@@ -166,7 +166,7 @@
         };
         "backlight" = {
           "format" = "󰃞 {percent}%";
-        }
+        };
         "custom/launcher" = {
           "format" = " ";
           "on-click" = "pkill rofi || rofi2";
