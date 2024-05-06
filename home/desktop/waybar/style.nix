@@ -1,3 +1,4 @@
+''
 * {
     border: none;
     border-radius: 0;
@@ -145,3 +146,4 @@ tooltip {
     border-right: 0px;
     margin-left: 0px;
 }
+''
