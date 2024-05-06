@@ -229,7 +229,7 @@
         };
         "battery" = {
           "fromat" = "󰂎{capacity}%";
-        }
+        };
       }];
     };
 }
