@@ -153,7 +153,7 @@
           "backlight"
           "memory"
           "cpu"
-          # "battery"
+          "battery"
           "network"
           "custom/powermenu"
           "tray"
