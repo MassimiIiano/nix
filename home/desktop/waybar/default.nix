@@ -153,11 +153,14 @@
           "backlight"
           "memory"
           "cpu"
-          "battery"
           "network"
+          "battery"
           "custom/powermenu"
           "tray"
         ];
+        "battery" = {
+          "format" = "bat: {capacity}%";
+        };
         "custom/launcher" = {
           "format" = " ";
           "on-click" = "pkill rofi || rofi2";
