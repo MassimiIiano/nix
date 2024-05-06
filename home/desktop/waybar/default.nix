@@ -228,7 +228,7 @@
           "spacing" = 5;
         };
         "battery" = {
-          "fromat" = "󰂎{capacity}%";
+          "fromat" = "󰂎{capacity}but";
         };
       }];
     };
