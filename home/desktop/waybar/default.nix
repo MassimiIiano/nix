@@ -154,7 +154,7 @@
           "memory"
           "cpu"
           "battery"
-          "network"
+          # "network"
           "custom/powermenu"
           "tray"
         ];
