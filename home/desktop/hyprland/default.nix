@@ -202,6 +202,8 @@ bindm = $mainMod, mouse:273, resizewindow
 bind = ,XF86AudioMute, exec, amixer set Master toggle
 bind = ,XF86AudioRaiseVolume, exec, exec amixer set Master 5%+
 bind = ,XF86AudioLowerVolume, exec ,amixer set Master 5%-
+
+exec = pkill waybar & sleep 0.5 && waybar
 '';
   };
 
