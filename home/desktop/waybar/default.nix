@@ -154,7 +154,7 @@
           "memory"
           "cpu"
           "battery"
-          # "network"
+          "network"
           "custom/powermenu"
           "tray"
         ];
@@ -227,6 +227,9 @@
           "icon-size" = 15;
           "spacing" = 5;
         };
+        "battery" = {
+          "fromat" = "󰂎{capacity}%";
+        }
       }];
     };
 }
