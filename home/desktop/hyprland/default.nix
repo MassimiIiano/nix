@@ -1,10 +1,5 @@
+{ pkgs, lib, inputs, theme, ... }:
 {
-  pkgs,
-  lib,
-  inputs,
-  theme,
-  ...
-}:{
 
   home.packages = with pkgs; [ gnome.file-roller hyprlock ];
 
