@@ -159,7 +159,10 @@
           "tray"
         ];
         "battery" = {
-          "format" = "bat: {capacity}%";
+          "format" = "{icon} {capacity}%";
+          "format-icons" = {
+            "default" = [ "󰂃" "󰂁" ];
+          };
         };
         "custom/launcher" = {
           "format" = " ";
