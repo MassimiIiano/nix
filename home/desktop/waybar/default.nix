@@ -153,7 +153,7 @@
           "backlight"
           "memory"
           "cpu"
-          "battery"
+          # "battery"
           "network"
           "custom/powermenu"
           "tray"
@@ -226,9 +226,6 @@
         "tray" = {
           "icon-size" = 15;
           "spacing" = 5;
-        };
-        "battery" = {
-          "fromat" = "󰂎{capacity}but";
         };
       }];
     };
