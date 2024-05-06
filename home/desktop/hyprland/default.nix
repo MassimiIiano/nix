@@ -201,9 +201,6 @@ bindm = $mainMod, mouse:273, resizewindow
 bind = ,XF86AudioMute, exec, amixer set Master toggle
 bind = ,XF86AudioRaiseVolume, exec, exec amixer set Master 5%+
 bind = ,XF86AudioLowerVolume, exec ,amixer set Master 5%-
-
-# starts dunst, swww and waybar
-exec-once=bash ~/.config/hypr/start.sh
 '';
   };
 
