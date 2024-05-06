@@ -202,6 +202,8 @@ bindm = $mainMod, mouse:273, resizewindow
 bind = ,XF86AudioMute, exec, amixer set Master toggle
 bind = ,XF86AudioRaiseVolume, exec, exec amixer set Master 5%+
 bind = ,XF86AudioLowerVolume, exec ,amixer set Master 5%-
+bind = ,XF86MonBrightnessUp, exec, brightnessctl set 10%+
+bind = ,XF86MonBrightnessDown, exec, brightnessctl set 10%-
 
 exec = pkill waybar & sleep 0.5 && waybar
 '';
