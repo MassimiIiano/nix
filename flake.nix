@@ -18,7 +18,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, hyprland, hyprlock ... }:
+  outputs = { nixpkgs, home-manager, hyprland, hyprlock, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
