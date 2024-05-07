@@ -5,6 +5,6 @@ _ :
 
     backgrounds = {
       path = "/home/spatola/Pictures/backgrounds/two-cakes.png";
-    }
+    };
   };
 }
