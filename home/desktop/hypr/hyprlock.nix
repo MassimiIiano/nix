@@ -5,6 +5,6 @@ _ :
   #   extraConfig = 
     
   # };
-  home.file.".config/hypr/hyprlock.conf".source = ./hyplock.conf;
+  home.file.".config/hypr/hyprlock.conf".source = ./hyprlock.conf;
 
 }
