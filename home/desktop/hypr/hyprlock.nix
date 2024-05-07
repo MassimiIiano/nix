@@ -3,7 +3,7 @@ _ :
   programs.hyprlock = {
     enable = true;  
 
-    backgrounds = {
+    background = {
       path = "/home/spatola/Pictures/backgrounds/two-cakes.png";
     };
   };
