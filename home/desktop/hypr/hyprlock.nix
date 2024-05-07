@@ -63,6 +63,4 @@ input-field {
 }
     '';
   };
-  # home.file.".config/hypr/hyprlock.conf".source = ./hyplock.conf;
-
 }
