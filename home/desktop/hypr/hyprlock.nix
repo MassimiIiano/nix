@@ -65,7 +65,7 @@ input-field {
   halign = center
   valign = center
 }
-    ''
+    '';
   };
   # home.file.".config/hypr/hyprlock.conf".source = ./hyplock.conf;
 
