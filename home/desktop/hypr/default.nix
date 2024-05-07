@@ -2,10 +2,9 @@
 {
 
   home.packages = with pkgs; [ gnome.file-roller ];
-  
-  # hyprlock
-  programs.hyprlock.enable = true;
 
+  imports = [ ./hyprlock.nix ];
+  
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
