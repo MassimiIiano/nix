@@ -15,7 +15,7 @@ general {
 
 background {
   monitor = 
-  path = echo '~/Pictures/backgrounds/two-cakes.png'
+  path = echo '~/Pictures/backgrounds/coko-cake.png'
   color = rgba(25, 20, 20, 1.0)
   blur_size = 8
   blur_passes = 0
@@ -25,10 +25,6 @@ background {
   vibrancy = 0.168600
   vibrancy_darkness = 0.050000
 }
-
-
-
-
 
 
 input-field {
