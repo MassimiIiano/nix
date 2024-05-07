@@ -11,8 +11,6 @@
     systemd.enable = true;
     xwayland.enable = true;
 
-    plugins [ ];
-
     extraConfig = 
 ''
 # #######################################################################################
