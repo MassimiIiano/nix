@@ -29,6 +29,7 @@
         # Specify your home configuration modules here, for example,
         modules = [ 
           hyprland.homeManagerModules.default
+          hyprlock.homeManagerModules.hyprlock
           ./home 
         ];
 

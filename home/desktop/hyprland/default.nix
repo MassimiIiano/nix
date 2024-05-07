@@ -1,12 +1,18 @@
 { pkgs, lib, inputs, theme, ... }:
 {
 
-  home.packages = with pkgs; [ gnome.file-roller hyprlock ];
+  home.packages = with pkgs; [ gnome.file-roller ];
+  
+  # hyprlock
+  programs.hyprlock.enable = true;
 
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
     xwayland.enable = true;
+
+    plugins [ ];
+
     extraConfig = 
 ''
 # #######################################################################################
@@ -56,7 +62,7 @@ input {
         natural_scroll = yes
     }
 
-    sensitivity = 0 # -1.0 to 1.0, 0 means no modification.
+    sensitivity = -0.5 # -1.0 to 1.0, 0 means no modification.
 }
 
 general {
