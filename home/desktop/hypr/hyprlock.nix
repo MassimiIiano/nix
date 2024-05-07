@@ -1,11 +1,10 @@
 _ : 
 {
   programs.hyprlock = {
-    enable = true;
-    # extraConfig = 
-    
+    enable = true;  
+    sources = [ ./hyprlock.conf ];  
   };
   # programs.hyprlock = {
-  home.file.".config/hypr/hyprlock.conf".source = ./hyprlock.conf;
+  # home.file.".config/hypr/hyprlock.conf".source = ./hyprlock.conf;
 
 }
