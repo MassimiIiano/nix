@@ -165,8 +165,8 @@
         "battery" = {
           "format" = "{icon} {capacity}%";
           "states" =  {
-            "warning" = 30;
-            "critical" = 15;
+            "warning" = 15;
+            "critical" = 7;
           };
           "format-icons" = {
             "default" = [ "" "" "" "" "" ];
