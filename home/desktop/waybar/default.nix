@@ -165,7 +165,7 @@
             "critical" = 15;
           };
           "format-icons" = {
-            "default" = [ "", "", "", "", "" ];
+            "default" = [ "" "" "" "" "" ];
           };
         };
         "backlight" = {
