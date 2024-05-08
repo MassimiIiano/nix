@@ -199,7 +199,7 @@
           "tooltip-format"= "{=%A; %d %B %Y}\n<tt>{calendar}</tt>";
         };
         "memory" = {
-          "interval" = 1;
+          "interval" = 5;
           "format" = "󰻠 {percentage}%";
           "states" = {
             "warning" = 85;
@@ -227,7 +227,8 @@
           "format-disconnected" = "󰯡 Disconnected";
           "format-ethernet" = "󰒢 Connected!";
           "format-linked" = "󰖪 {essid} (No IP)";
-          "format-wifi" = "󰖩 {essid}";
+          "format-wifi" = "{icon} {essid}";
+          "format-icons" = ["󰤟" "󰤢" "󰤥" "󰤨"];
           "interval" = 1;
           "tooltip" = false;
           "max-length" = 15;
