@@ -230,7 +230,7 @@
           "format-wifi" = "󰖩 {essid}";
           "interval" = 1;
           "tooltip" = false;
-          "max-length" = 25;
+          "max-length" = 15;
         };
         "custom/powermenu" = {
           "format" = "";
