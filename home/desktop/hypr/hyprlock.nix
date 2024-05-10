@@ -2,9 +2,14 @@ _ :
 {
   programs.hyprlock = {
     enable = true;  
-
-    # backgrounds = {
-    #   path = "/home/spatola/Pictures/backgrounds/two-cakes.png";
-    # };
+    settings = {
+    background = [
+      {
+        path = "~/Pictures/backgrounds/two-cakes.png";
+        blur_passes = 3;
+        blur_size = 8;
+      }
+    ];
+    }
   };
 }
