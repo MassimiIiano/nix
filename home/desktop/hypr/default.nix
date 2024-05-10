@@ -5,6 +5,9 @@
 
   imports = [ ./hyprlock.nix ];
   
+  home.file.".config/hypr/start.sh".source = ./start.sh;
+
+  
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
@@ -210,7 +213,7 @@ bind = ,XF86MonBrightnessUp, exec, brightnessctl set 10%+
 bind = ,XF86MonBrightnessDown, exec, brightnessctl set 10%-
 
 exec = pkill waybar & sleep 0.5 && waybar
-exec = swww-daemon 
+exec-once = ./start.sh
 '';
   };
 

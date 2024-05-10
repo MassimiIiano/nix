@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 # initialize wallpaper daemon
-# swww-daemon &
+swww-daemon &
 # set wallpaper
-# swww img ~/path/to/file.png &
+swww img ~/Pictures/backgrounds/confy-distopia.gif
 
 # networking
 # nm-applet --indicator &
