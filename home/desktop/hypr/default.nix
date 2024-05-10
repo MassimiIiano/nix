@@ -30,7 +30,7 @@ monitor=,preferred,auto,1.5
 # See https://wiki.hyprland.org/Configuring/Keywords/ for more
 
 # Execute your favorite apps at launch
-# exec-once = waybar & hyprpaper & firefox
+# exec-once = waybar & firefox & swww-daemon
 
 # Source a file (multi-file configs)
 # source = ~/.config/hypr/myColors.conf
@@ -210,8 +210,7 @@ bind = ,XF86MonBrightnessUp, exec, brightnessctl set 10%+
 bind = ,XF86MonBrightnessDown, exec, brightnessctl set 10%-
 
 exec = pkill waybar & sleep 0.5 && waybar
-exec-once = swww-daemon
-exec-once = sleep 0.1 && swww img ~/Pictures/backgrounds/confy-distopia.gif
+exec = sleep 0.1 & swww img ~/Pictures/backgrounds/confy-distopia.gif
 '';
   };
 
