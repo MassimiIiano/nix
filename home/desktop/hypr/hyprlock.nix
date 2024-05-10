@@ -2,7 +2,7 @@ _ :
 {
   programs.hyprlock = {
     enable = true;  
-    settings = {
+
     background = [
       {
         path = "~/Pictures/backgrounds/two-cakes.png";
@@ -10,6 +10,5 @@ _ :
         blur_size = 8;
       }
     ];
-    };
   };
 }
