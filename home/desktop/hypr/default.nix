@@ -1,7 +1,7 @@
 { pkgs, lib, inputs, theme, ... }:
 {
 
-  home.packages = with pkgs; [ gnome.file-roller ];
+  home.packages = with pkgs; [ gnome.file-roller swww ];
 
   imports = [ ./hyprlock.nix ];
   
