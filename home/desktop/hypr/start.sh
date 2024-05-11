@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
 
-# initialize wallpaper daemon
-swww-daemon &
-
-# notification daemon
-dunst &
-
 # set wallpaper
 images=(~/Pictures/backgrounds/*)
 
