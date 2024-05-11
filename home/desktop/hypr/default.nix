@@ -6,7 +6,7 @@
   imports = [ ./hyprlock.nix ];
   
   home.file.".config/hypr/start.sh".enable = true;
-  home.file.".config/hypr/start.sh".source = ./start.sh;
+  home.file.".config/hypr/start.sh".text = ./start.sh;
   home.file.".config/hypr/start.sh".executable = true;
   
   
