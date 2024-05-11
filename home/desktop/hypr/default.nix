@@ -5,9 +5,9 @@
 
   imports = [ ./hyprlock.nix ];
   
-  home.file.".config/hypr/start.sh".enable = true;
+#   home.file.".config/hypr/start.sh".enable = true;
   home.file.".config/hypr/start.sh".source = ./start.sh;
-  home.file.".config/hypr/start.sh".executable = true;
+#   home.file.".config/hypr/start.sh".executable = true;
   
   
   wayland.windowManager.hyprland = {
@@ -215,6 +215,7 @@ bind = ,XF86MonBrightnessUp, exec, brightnessctl set 10%+
 bind = ,XF86MonBrightnessDown, exec, brightnessctl set 10%-
 
 exec = pkill waybar & sleep 0.5 && waybar
+exec-once = ./start.sh
 '';
   };
 
