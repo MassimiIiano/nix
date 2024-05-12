@@ -15,6 +15,11 @@
     systemd.enable = true;
     xwayland.enable = true;
 
+    settings.exec-once = [
+        "swww-daemon"
+        "dunst"
+        "sleep 0.5 && swww img /home/spatola/.config/home-manager/home/desktop/hypr/backgrounds/confy-distopia.gif"
+    ];
     extraConfig = 
 ''
 # #######################################################################################
@@ -211,7 +216,7 @@ bind = ,XF86AudioLowerVolume, exec ,amixer set Master 5%-
 bind = ,XF86MonBrightnessUp, exec, brightnessctl set 10%+
 bind = ,XF86MonBrightnessDown, exec, brightnessctl set 10%-
 
-exec = pkill waybar & sleep 0.5 && waybar & swww-daemon & dunst & images=(~/Pictures/backgrounds/*); while true; do for img in "''${images[@]}"; do swww img "$img" & sleep 10; done; done
+exec = pkill waybar & sleep 0.5 && waybar
 '';
   };
 
