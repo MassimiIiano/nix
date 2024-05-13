@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# get updates
+git pull
+
 # Add all files to the staging area
 git add .
 
