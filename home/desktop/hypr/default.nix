@@ -211,6 +211,7 @@ bind = ,XF86AudioLowerVolume, exec ,amixer set Master 5%-
 bind = ,XF86MonBrightnessUp, exec, brightnessctl set 10%+
 bind = ,XF86MonBrightnessDown, exec, brightnessctl set 10%-
 
+
 exec = pkill waybar & sleep 0.5 && waybar
 exec-once = swww-daemon & dunst & images=(~/Pictures/backgrounds/*); while true; do for img in "''${images[@]}"; do swww img "$img" & sleep 10; done; done
 '';
