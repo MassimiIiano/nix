@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+nix flake update
 # get updates
 git pull
 
