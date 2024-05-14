@@ -23,7 +23,6 @@
 
         # Specify your home configuration modules here, for example,
         modules = [ 
-          hyprland.homeManagerModules.default
           ./home 
         ];
 
