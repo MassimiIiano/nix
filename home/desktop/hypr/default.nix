@@ -1,14 +1,7 @@
 { pkgs, lib, inputs, theme, ... }:
 {
 
-  home.packages = with pkgs; [ gnome.file-roller swww ];
-
-#   imports = [ ./hyprlock.nix ];
-  
-#   home.file.".config/hypr/start.sh".enable = true;
-  home.file.".config/hypr/start.sh".source = ./start.sh;
-#   home.file.".config/hypr/start.sh".executable = true;
-  
+  home.packages = with pkgs; [ gnome.file-roller swww ];  
   
   wayland.windowManager.hyprland = {
     enable = true;
