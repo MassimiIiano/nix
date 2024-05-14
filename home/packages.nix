@@ -21,7 +21,7 @@
     ghidra                # reverse engineering
 
     # gaming
-    protonup              # protonvpn cli
+    # protonup              # 
     bastet                # tetris
   ];
 }
