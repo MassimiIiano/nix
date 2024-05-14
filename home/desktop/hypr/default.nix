@@ -3,7 +3,7 @@
 
   home.packages = with pkgs; [ gnome.file-roller swww ];
 
-  imports = [ ./hyprlock.nix ];
+#   imports = [ ./hyprlock.nix ];
   
 #   home.file.".config/hypr/start.sh".enable = true;
   home.file.".config/hypr/start.sh".source = ./start.sh;
