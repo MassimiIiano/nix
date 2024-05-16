@@ -141,7 +141,7 @@ windowrulev2 = suppressevent maximize, class:.* # You'll probably like this.
 
 
 # See https://wiki.hyprland.org/Configuring/Keywords/ for more
-$mainMod = SUPER
+$mainMod = ALT
 
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
 bind = $mainMod, Q, exec, $terminal
