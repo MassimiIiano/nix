@@ -11,14 +11,9 @@
 
     hyprland.url = "github:hyprwm/Hyprland";
     hyprland.inputs.nixpkgs.follows = "nixpkgs";
-
-    hyprlock = {
-      url = "github:hyprwm/Hyprlock";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = { nixpkgs, home-manager, hyprland, hyprlock, ... }:
+  outputs = { nixpkgs, home-manager, hyprland, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -28,8 +23,6 @@
 
         # Specify your home configuration modules here, for example,
         modules = [ 
-          hyprland.homeManagerModules.default
-          hyprlock.homeManagerModules.hyprlock
           ./home 
         ];
 

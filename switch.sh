@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+nix flake update
+# get updates
+git pull
 
 # Add all files to the staging area
 git add .

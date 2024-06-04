@@ -1,8 +1,8 @@
 {...}: {
   imports = [
     ./gtk.nix
-    ./zathura.nix
-    ./hypr
-    ./waybar
+    # ./zathura.nix
+    # ./hypr
+    # ./waybar
   ];
 }

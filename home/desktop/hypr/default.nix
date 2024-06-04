@@ -1,14 +1,7 @@
 { pkgs, lib, inputs, theme, ... }:
 {
 
-  home.packages = with pkgs; [ gnome.file-roller swww ];
-
-  imports = [ ./hyprlock.nix ];
-  
-#   home.file.".config/hypr/start.sh".enable = true;
-  home.file.".config/hypr/start.sh".source = ./start.sh;
-#   home.file.".config/hypr/start.sh".executable = true;
-  
+  home.packages = with pkgs; [ gnome.file-roller swww ];  
   
   wayland.windowManager.hyprland = {
     enable = true;
@@ -216,7 +209,9 @@ bind = ,XF86AudioLowerVolume, exec ,amixer set Master 5%-
 bind = ,XF86MonBrightnessUp, exec, brightnessctl set 10%+
 bind = ,XF86MonBrightnessDown, exec, brightnessctl set 10%-
 
+
 exec = pkill waybar & sleep 0.5 && waybar
+exec-once = swww-daemon & dunst & images=(~/Pictures/backgrounds/*); while true; do for img in "''${images[@]}"; do swww img "$img" & sleep 10; done; done
 '';
   };
 
