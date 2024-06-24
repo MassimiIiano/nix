@@ -23,5 +23,6 @@
     # gaming
     protonup             
     bastet                # tetris
+    teams-for-linux       # microsoft teams
   ];
 }
