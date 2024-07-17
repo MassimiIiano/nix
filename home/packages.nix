@@ -8,6 +8,7 @@
 
     # social
     discord               # chat client
+    signal-desktop        # messaging
 
     # dev tools
     gh                    # github cli
