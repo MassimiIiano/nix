@@ -5,6 +5,81 @@
   ...
 }:
 
+let
+  # OpenAI's Linux desktop preview bundles ChatGPT, Work, and the Codex GUI.
+  # Nixpkgs' `chatgpt` derivation is currently only available for macOS.
+  chatgptDesktop = pkgs.stdenv.mkDerivation (finalAttrs: {
+    pname = "chatgpt";
+    version = "26.901.41600";
+
+    src = pkgs.fetchurl {
+      url = "https://persistent.oaistatic.com/codex-app-prod/linux/deb/latest/chatgpt_amd64.deb";
+      hash = "sha256-Fc9CKnfo8op1U9MYC4xyeEqZRDihQXhMgtcs3pPvync=";
+    };
+
+    nativeBuildInputs = with pkgs; [
+      autoPatchelfHook
+      dpkg
+    ];
+
+    buildInputs = with pkgs; [
+      alsa-lib
+      at-spi2-atk
+      at-spi2-core
+      atk
+      cairo
+      cups
+      dbus
+      expat
+      gdk-pixbuf
+      glib
+      gtk3
+      libdrm
+      libgbm
+      libnotify
+      libxkbcommon
+      nspr
+      nss
+      pango
+      systemd
+      libusb1
+      libX11
+      libXcomposite
+      libXdamage
+      libXext
+      libXfixes
+      libXrandr
+      libxcb
+    ];
+
+    unpackPhase = "dpkg-deb -x $src .";
+
+    # The bundle includes optional musl Node extensions alongside the glibc
+    # variants used on NixOS.
+    autoPatchelfIgnoreMissingDeps = [
+      "libQt5Core.so.5"
+      "libQt5Gui.so.5"
+      "libQt5Widgets.so.5"
+      "libQt6Core.so.6"
+      "libQt6Gui.so.6"
+      "libQt6Widgets.so.6"
+      "libc.musl-x86_64.so.1"
+    ];
+
+    installPhase = ''
+      runHook preInstall
+      cp -a usr "$out"
+      runHook postInstall
+    '';
+
+    meta = {
+      description = "ChatGPT desktop app with the Codex GUI";
+      homepage = "https://chatgpt.com/download";
+      platforms = pkgs.lib.platforms.linux;
+      mainProgram = "chatgpt";
+    };
+  });
+in
 {
   imports = [
     # Include the results of the hardware scan.
@@ -167,6 +242,7 @@
     opencode # code editor with open source ai features
     antigravity-ide # code editor
     codex # codex cli
+    chatgptDesktop # ChatGPT desktop app, including the Codex GUI
     bubblewrap # required by codex
     pkgsStable.micromamba
     python3
