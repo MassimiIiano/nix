@@ -20,7 +20,6 @@
       "org/gnome/desktop/interface".scaling-factor = 1.7;
 
       "org/gnome/desktop/interface" = {
-        font-name = "Cantarell 11"; # Change to your preferred font
         document-font-name = "Sans 11";
         monospace-font-name = "Fira Code 12";
       };
@@ -40,6 +39,14 @@
     # Gaming tools
     protonup-ng # proton updater
 
+    # Classic games
+    aisleriot # Solitaire card games, including Spider
+    gnome-mines # Minesweeper
+    gnome-sudoku # Sudoku
+    gnome-mahjongg # Mahjong solitaire
+    gnome-chess # Chess
+    quadrapassel # Tetris-style game
+
     # Learning tools
     pkgsStable.obsidian # note taking
     foliate # ebook reader
@@ -50,7 +57,7 @@
     (writeShellScriptBin "my-hello" ''
       echo "Hello, ${config.home.username}!"
     '')
-    conda
+    pkgsStable.conda
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

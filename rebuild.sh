@@ -34,22 +34,26 @@ if [ -z "$1" ]; then
 fi
 
 # Check if the user has provided a issue number
-if [ ! -z "$2" ]; then
-    echo "No issue number provided. not linking commit to an issue."
+if [ -n "$2" ]; then
     set -- "$1" " #$2"
 else
+    echo "No issue number provided. not linking commit to an issue."
     # If no second argument, just use the first argument as is
     set -- "$1" ""
 fi
 
+# Rebuild NixOS before committing so failed updates stay uncommitted.
+sudo nixos-rebuild switch --flake ./#marvin
+
 # Add all files to the staging area
 # Commit the changes with the current date and time as the message
 git add -A
-git commit -m "switch marvin$2: $1, $gen"
+if git diff --cached --quiet; then
+    echo "No changes to commit."
+else
+    git commit -m "switch marvin$2: $1, $gen"
+fi
 git pull
-
-# Rebuld NixOS
-sudo nixos-rebuild switch --flake ./#marvin
 
 # Push the changes to the remote repository
 git push

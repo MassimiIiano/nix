@@ -54,7 +54,6 @@
   services.desktopManager.gnome.enable = true;
 
   services.displayManager = {
-    gdm.wayland = true;
     gdm.enable = true;
   };
 
@@ -107,21 +106,12 @@
     "libsoup-2.74.3"
   ];
 
-  # Re-enable Google Drive support in GNOME Wait for upstream fix.
+  # Enable full GNOME support in gvfs.
   nixpkgs.overlays = [
     (final: prev: {
       gnome = prev.gnome.overrideScope (gfinal: gprev: {
         gvfs = gprev.gvfs.override {
-          googleSupport = true;
           gnomeSupport = true;
-        };
-      });
-    })
-    (self: super: {
-      wireshark = super.wireshark.overrideAttrs (oldAttrs: {
-        src = super.fetchurl {
-          url = oldAttrs.src.url;
-          sha256 = "NbabAdCUXeZqWXUaiR+3CjXBAV5u4Nz2VqVqX+Jp2Lg=";
         };
       });
     })
@@ -175,10 +165,10 @@
     pkgsStable.busybox # set of unix utilities
     code-cursor # vscode with better ai features
     opencode # code editor with open source ai features
-    antigravity # code editor
+    antigravity-ide # code editor
     codex # codex cli
     bubblewrap # required by codex
-    micromamba
+    pkgsStable.micromamba
     python3
     protege-distribution # ontology editor
     (pkgs.warp-terminal.override { waylandSupport = true; }) # terminal
@@ -227,7 +217,14 @@
   hardware.graphics.enable = true;
 
   # docker
-  virtualisation.docker.enable = true;
+  virtualisation.docker = {
+    enable = true;
+    # Reclaim unused build cache automatically, targeting 10 GB of storage.
+    daemon.settings.builder.gc = {
+      enabled = true;
+      defaultKeepStorage = "10GB";
+    };
+  };
 
   # Create a swap file
   swapDevices = [
